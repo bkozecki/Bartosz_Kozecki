@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: Fade-In 2s ease-in-out;
+
+  &_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    padding: 1rem 2rem 2rem 2rem;
+    background-color: rgb(255, 255, 255);
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    box-shadow: 0px 5px 10px (255, 255, 255);
+
+    &_img {
+      height: 4rem;
+      align-self: center;
+      margin-right: 0.5rem;
+    }
+
+    &_txt {
+      font-size: 2rem;
+      font-family: "Patua One", cursive;
+    }
+  }
+}
+@keyframes Fade-In {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}

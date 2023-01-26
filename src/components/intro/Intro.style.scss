@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+
+.intro_wrap {
+  min-height: 60rem;
+  position: relative;
+  border-bottom: 4px solid #eaf6f6;
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
+  background: linear-gradient(
+    315deg,
+    rgb(58, 10, 172) 3%,
+    rgb(24, 29, 118) 38%,
+    rgb(10, 28, 160) 68%,
+    rgb(14, 131, 210) 98%
+  );
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 8px solid #fcd12a;
+
+  main {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 3rem;
+  }
+
+  &_left_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: shape-enter-right 2s ease-out;
+  }
+  &_right_nav {
+    display: flex;
+    flex-direction: column;
+    animation: shape-enter-left 2s ease-out;
+  }
+  .nav_list {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &_item {
+      padding: 1rem 0;
+      color: #fff;
+      font-size: 2rem;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    &_icon {
+      height: 3.5rem;
+      filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(297deg)
+        brightness(102%) contrast(101%);
+    }
+  }
+
+  .intro_text {
+    font-size: 7rem;
+    font-family: "Bangers", cursive;
+    letter-spacing: 5px;
+    z-index: 1;
+    width: 80%;
+    color: rgb(240, 240, 240);
+  }
+}
+.resume {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  font-weight: 700;
+}
+@keyframes shape-enter-left {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes shape-enter-right {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.wave {
+  background: rgba(66, 145, 241, 0.55);
+  border-radius: 1000% 1000% 0 0;
+  position: absolute;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(1);
+  }
+}
