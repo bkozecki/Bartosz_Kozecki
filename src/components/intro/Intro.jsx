@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-scroll";
-import Typical from "react-typical";
+import Typed from "typed.js";
 
 import Header from "./Header";
 import "./Intro.style.scss";
 
 const Intro = () => {
+  const el = useRef(null);
+  const typed = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      strings: [
+        "Bartosz Kozecki",
+        "Software Developer",
+        "Witaj w moim świecie...",
+      ],
+      typeSpeed: 50,
+      backSpeed: 50,
+    };
+
+    typed.current = new Typed(el.current, options);
+
+    return () => {
+      typed.current.destroy();
+    };
+  }, []);
+
   return (
     <div className="intro_wrap">
       <Header />
@@ -65,18 +86,8 @@ const Intro = () => {
           </ul>
         </nav>
       </main>
-      <span className="intro_text">
-        <Typical
-          steps={[
-            3000,
-            "Bartosz Kozecki",
-            3000,
-            "Software Developer",
-            3000,
-            "Witaj w moim świecie...",
-            3000,
-          ]}
-        />
+      <span className="intro_text type-wrap">
+        <span style={{ whiteSpace: "pre" }} ref={el} />
       </span>
       <div className="wave"></div>
       <div className="wave"></div>
