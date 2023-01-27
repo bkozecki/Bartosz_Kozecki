@@ -14,9 +14,9 @@ const Intro = () => {
       strings: [
         "Bartosz Kozecki",
         "Software Developer",
-        "Witaj w moim świecie...",
+        "Witaj w moim świecie.",
       ],
-      typeSpeed: 50,
+      typeSpeed: 70,
       backSpeed: 50,
     };
 
@@ -34,35 +34,11 @@ const Intro = () => {
         <nav className="intro_wrap_left_nav">
           <ul className="nav_list">
             <li className="nav_list_item">
-              <Link to="projects" spy={true} smooth={true} duration={500}>
-                projekty
-              </Link>
-            </li>
-            <li className="nav_list_item">
-              <Link to="about" spy={true} smooth={true} duration={500}>
-                o mnie
-              </Link>
-            </li>
-            <li className="nav_list_item">
-              <Link to="skills" spy={true} smooth={true} duration={500}>
-                tech stack
-              </Link>
-            </li>
-            <li className="nav_list_item">
-              <Link to="contact" spy={true} smooth={true} duration={500}>
-                kontakt
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <nav className="intro_wrap_right_nav">
-          <ul className="nav_list">
-            <li className="nav_list_item right">
               <a>
                 <span className="resume">CV</span>
               </a>
             </li>
-            <li className="nav_list_item right">
+            <li className="nav_list_item">
               <a
                 href="https://www.linkedin.com/in/bartosz-kozecki-ba798a197/"
                 target="_blank"
@@ -74,7 +50,7 @@ const Intro = () => {
                 />
               </a>
             </li>
-            <li className="nav_list_item right">
+            <li className="nav_list_item">
               <a href="https://github.com/bkozecki" target="_blank">
                 <img
                   src={require("../../resources/github.png")}
@@ -82,6 +58,31 @@ const Intro = () => {
                   className="nav_list_icon"
                 />
               </a>
+            </li>
+            <li className="nav_list_item"></li>
+          </ul>
+        </nav>
+        <nav className="intro_wrap_right_nav">
+          <ul className="nav_list">
+            <li className="nav_list_item right">
+              <Link to="projects" spy={true} smooth={true} duration={500}>
+                projekty
+              </Link>
+            </li>
+            <li className="nav_list_item right">
+              <Link to="about" spy={true} smooth={true} duration={500}>
+                o mnie
+              </Link>
+            </li>
+            <li className="nav_list_item right">
+              <Link to="skills" spy={true} smooth={true} duration={500}>
+                tech stack
+              </Link>
+            </li>
+            <li className="nav_list_item right">
+              <Link to="contact" spy={true} smooth={true} duration={500}>
+                kontakt
+              </Link>
             </li>
           </ul>
         </nav>

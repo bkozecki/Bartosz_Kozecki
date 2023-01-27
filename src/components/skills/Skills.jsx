@@ -44,6 +44,7 @@ const Skills = () => {
             <li className="skills_list_item">Data Analytics</li>
             <li className="skills_list_item">RWD</li>
             <li className="skills_list_item">UI/UX</li>
+            <li className="skills_list_item">CMS</li>
           </ul>
         </div>
       </div>

@@ -21,7 +21,7 @@ const About = () => {
             <li className="about_content_left_list_item">
               Moje zainteresowanie programowaniem rozpoczeło się w 2021 roku,
               gdy zacząłem budować w zaciszu domomym proste strony internetowe.
-              Chwile późniniej znalazłem się w procesie tworzenia komercyjnych
+              Chwile później znalazłem się w procesie tworzenia komercyjnych
               projektów i prostych gier, tak narodziła się moja miłość do
               programowania.
             </li>
