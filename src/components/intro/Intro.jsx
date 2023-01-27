@@ -18,6 +18,7 @@ const Intro = () => {
       ],
       typeSpeed: 70,
       backSpeed: 50,
+      startDelay: 2000,
     };
 
     typed.current = new Typed(el.current, options);
