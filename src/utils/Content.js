@@ -8,7 +8,7 @@ export const KINGS_PL =
   "Przykład witryny e-commerce z backendem w Firebase i bramkapłatności stworzoną za pomocą Stripe API. Aplikacja zbudowana w React z Redux.";
 
 export const KINGS_ENG =
-  "Example of e-commerce website with a firebase backend and a Stripe payment gate. Build with react, redux and SASS. With a sign-up and login functionality connected to the firebase backend that is also responsible for authentication of users, which allows them to log in after signing in.";
+  "Example of e-commerce website with a firebase backend and a Stripe payment gate. Build with react, redux and SASS. With a sign-up and login functionality connected to the firebase backend that is also responsible for authenticationxw.";
 
 export const BANKIST_PL =
   "Przykład landing page dla aplikacji finansowej, funkcjonalność zbudowana za pomocą JavaScript.";
