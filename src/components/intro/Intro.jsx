@@ -1,6 +1,7 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import { Link } from "react-scroll";
 import Typed from "typed.js";
+import lngCtx from "../../utils/ctx-lang";
 
 import Header from "./Header";
 import "./Intro.style.scss";
@@ -8,13 +9,14 @@ import "./Intro.style.scss";
 const Intro = () => {
   const el = useRef(null);
   const typed = useRef(null);
+  const ctx = useContext(lngCtx);
 
   useEffect(() => {
     const options = {
       strings: [
         "Bartosz Kozecki",
         "Software Developer",
-        "Witaj w moim świecie.",
+        `${!ctx.english ? "Witaj w moim świecie." : "Welcome to my world."}`,
       ],
       typeSpeed: 70,
       backSpeed: 50,
@@ -26,7 +28,7 @@ const Intro = () => {
     return () => {
       typed.current.destroy();
     };
-  }, []);
+  }, [ctx.english]);
 
   return (
     <div className="intro_wrap">
@@ -67,12 +69,12 @@ const Intro = () => {
           <ul className="nav_list">
             <li className="nav_list_item right">
               <Link to="projects" spy={true} smooth={true} duration={500}>
-                projekty
+                {`${!ctx.english ? "projekty" : "projects"}`}
               </Link>
             </li>
             <li className="nav_list_item right">
               <Link to="about" spy={true} smooth={true} duration={500}>
-                o mnie
+                {`${!ctx.english ? "o mnie" : "about me"}`}
               </Link>
             </li>
             <li className="nav_list_item right">
@@ -82,7 +84,7 @@ const Intro = () => {
             </li>
             <li className="nav_list_item right">
               <Link to="contact" spy={true} smooth={true} duration={500}>
-                kontakt
+                {`${!ctx.english ? "kontakt" : "contact"}`}
               </Link>
             </li>
           </ul>

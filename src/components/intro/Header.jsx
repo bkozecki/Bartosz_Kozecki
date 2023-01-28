@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import lngCtx from "../../utils/ctx-lang";
 
 import "./Header.style.scss";
 
 const Header = () => {
+  const ctx = useContext(lngCtx);
   return (
     <header className="header">
       <div className="header_logo">
@@ -13,6 +15,14 @@ const Header = () => {
         />
         <span className="header_logo_txt">| BKOZECKI </span>
       </div>
+      <img
+        src={require(`../../resources/${
+          ctx.english ? "united-kingdom (1)" : "united-kingdom"
+        }.png`)}
+        alt="UK"
+        className={`header_lng_toggler ${ctx.english ? "toggled" : ""}`}
+        onClick={ctx.toggleLng}
+      />
     </header>
   );
 };

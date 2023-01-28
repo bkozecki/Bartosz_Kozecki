@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { useInView } from "react-intersection-observer";
+import lngCtx from "../../utils/ctx-lang";
+import { ABOUT } from "../../utils/Content";
 
 import "./About.style.scss";
 
 const About = () => {
+  const ctx = useContext(lngCtx);
   const { ref, inView } = useInView({
     threshold: 0.3,
     triggerOnce: true,
@@ -13,29 +16,21 @@ const About = () => {
     <div className={`about`} ref={ref} id="about">
       <div className={`about_content ${inView ? "visiable" : ""}`}>
         <div className="about_content_left">
-          <h1 className="about_header">Nazywam się Bartosz,</h1>
+          <h1 className="about_header">{`${
+            !ctx.english ? ABOUT.headerPL : ABOUT.headerENG
+          }`}</h1>
           <h2 className="about_header_secondary">
-            Jestem Software Developerem.
+            {`${!ctx.english ? ABOUT.headingPL : ABOUT.headingENG}`}
           </h2>
           <ul className="about_content_list">
             <li className="about_content_left_list_item">
-              Moje zainteresowanie programowaniem rozpoczeło się w 2021 roku,
-              gdy zacząłem budować w zaciszu domomym proste strony internetowe.
-              Chwile później znalazłem się w procesie tworzenia komercyjnych
-              projektów i prostych gier, tak narodziła się moja miłość do
-              programowania.
+              {`${!ctx.english ? ABOUT.firstParaPL : ABOUT.firstParaENG}}`}
             </li>
             <li className="about_content_left_list_item">
-              Aplikacje tworzę z myślą o użtkowniku i jego wrażeniach. Wierze w
-              przejrzyste, intuicyjne aplikacje, napisane czystym i szybkim
-              kodem, z których korzystanie daje samą przyjemność. Uważam, że
-              żaden problem nie jest zbyt trudny do rozwiązania, jeśli podzieli
-              się go na mniejsze części.
+              {`${!ctx.english ? ABOUT.secondParaPL : ABOUT.secondParaENG}}`}
             </li>
             <li className="about_content_left_list_item">
-              W przerwie od programowania uwielbiam oglądać motorsport, spędzać
-              czas z najbliższymi, uprawiać sport, czy czasem zatracić się w
-              ulubionej grze.
+              {`${!ctx.english ? ABOUT.thirdParaPL : ABOUT.thirdParaENG}}`}
             </li>
             <li className="about_content_left_list_item">
               <a
@@ -43,7 +38,7 @@ const About = () => {
                 href="https://www.linkedin.com/in/bartosz-kozecki-ba798a197/"
                 target="_blank"
               >
-                Więcej o mnie
+                {`${!ctx.english ? ABOUT.buttonPL : ABOUT.buttonENG}`}
               </a>
             </li>
           </ul>

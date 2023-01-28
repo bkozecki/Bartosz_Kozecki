@@ -6,17 +6,18 @@ import About from "./components/about/About";
 import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import ContextProvider from "./utils/ContextProvider";
 
 function App() {
   return (
-    <div className="App">
+    <ContextProvider>
       <Intro />
       <Projects />
       <About />
       <Skills />
       <Contact />
       <Footer />
-    </div>
+    </ContextProvider>
   );
 }
 

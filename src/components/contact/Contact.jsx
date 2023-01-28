@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useInView } from "react-intersection-observer";
+import lngCtx from "../../utils/ctx-lang";
+import { CONTACT } from "../../utils/Content";
 
 import "./Contact.styles.scss";
 
 const Contact = () => {
+  const ctx = useContext(lngCtx);
   const { ref, inView } = useInView({
     threshold: 0.15,
     triggerOnce: true,
@@ -13,12 +16,10 @@ const Contact = () => {
     <div className={`Contact`} id="contact">
       <div className={`Contact_content ${inView ? "visiable" : ""}`} ref={ref}>
         <h2 className="Contact_header">
-          Masz projekt który wymaga realizacji, a może jakieś dodatkowe pytania?
+          {`${!ctx.english ? CONTACT.headerPL : CONTACT.headerENG}`}
         </h2>
         <p className="Contact_text">
-          Bardzo chętnie z Tobą porozmawiam! Sprawdź mojego GitHub'a jeśli
-          chcesz zobaczyć więcej mojej pracy. Połącz się ze mną na Linkedin,
-          albo podeślij do mnie maila na bart.kozecki@gmail.com
+          {`${!ctx.english ? CONTACT.textPL : CONTACT.textENG}`}
         </p>
 
         <div className="Contact_icons">

@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useInView } from "react-intersection-observer";
+import lngCtx from "../../utils/ctx-lang";
+import {
+  MAUT_PL,
+  MAUT_ENG,
+  KINGS_ENG,
+  KINGS_PL,
+  BANKIST_PL,
+  BANKIST_ENG,
+} from "../../utils/Content";
 
 import "./Projects.style.scss";
 
 const Projects = () => {
   const [infoVisiable, setInfoVisiable] = useState(0);
+  const ctx = useContext(lngCtx);
 
   const { ref, inView } = useInView({
     threshold: 0.15,
@@ -25,13 +35,16 @@ const Projects = () => {
       ref={ref}
       id="projects"
     >
-      <h1 className="projects_header">Wybrane projekty:</h1>
+      <h1 className="projects_header">{`${
+        !ctx.english ? "Wybrane projekty" : "Chosen projects"
+      }:`}</h1>
       <a
         className="projects_link"
         href="https://github.com/bkozecki"
         target="_blank"
       >
-        [ zobacz więcej na GitHub ]
+        [ {`${!ctx.english ? "zobacz więcej na GitHub" : "see more on GitHub"}`}
+        ]
       </a>
       <div className="projects_list">
         <div className="projects_list_item">
@@ -52,8 +65,7 @@ const Projects = () => {
               infoVisiable === 1 ? "active" : ""
             } first`}
           >
-            Mój pierwszy w pełni zaprojektowany i opracowany komercyjny projekt
-            z własnym kalkulatorem oraz formularzem kontaktowym.
+            {`${!ctx.english ? MAUT_PL : MAUT_ENG}`}
           </span>
         </div>
         <div className="projects_list_item">
@@ -74,9 +86,7 @@ const Projects = () => {
               infoVisiable === 2 ? "active" : ""
             } first`}
           >
-            Przykład witryny e-commerce z backendem w Firebase i bramka
-            płatności stworzoną za pomocą Stripe API. Aplikacja zbudowana w
-            React z Redux.
+            {`${!ctx.english ? KINGS_PL : KINGS_ENG}`}
           </span>
         </div>
         <div className="projects_list_item">
@@ -103,8 +113,7 @@ const Projects = () => {
               infoVisiable === 3 ? "active" : ""
             } first`}
           >
-            Przykład landing page dla aplikacji finansowej, funkcjonalność
-            zbudowana za pomocą JavaScript.
+            {`${!ctx.english ? BANKIST_PL : BANKIST_ENG}`}
           </span>
         </div>
       </div>
