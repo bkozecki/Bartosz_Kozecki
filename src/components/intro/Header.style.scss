@@ -57,7 +57,15 @@
     transform: translateY(0%);
   }
 }
-
+@media only screen and (min-width: 1920px) {
+  .header {
+    &_lng_toggler {
+      top: 2em;
+      right: 7.5em;
+      height: 2.3rem;
+    }
+  }
+}
 @media only screen and (max-width: 1440px) {
   .header_logo {
     padding: 1rem 1.5rem 2rem 1.5rem;
