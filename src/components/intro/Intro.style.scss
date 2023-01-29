@@ -203,6 +203,7 @@
 @media only screen and (max-width: 1440px) {
   .intro_wrap {
     min-height: 45rem;
+    text-align: center;
 
     .nav_list {
       list-style: none;
@@ -248,6 +249,10 @@
   .intro_wrap {
     min-height: 30rem;
 
+    main {
+      padding: 1rem 1.5rem;
+    }
+
     .nav_list {
       list-style: none;
       text-align: center;
@@ -258,17 +263,17 @@
 
       &_item {
         color: #fff;
-        font-size: 1.2rem;
+        font-size: 1rem;
         transition: all 0.2s ease-in;
         cursor: pointer;
-        height: 3.5rem;
+        height: 3rem;
 
         &:hover {
           transform: scale(1.1);
         }
       }
       &_icon {
-        height: 2.5rem;
+        height: 2.2rem;
         margin-top: 1rem 0;
         filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(297deg)
           brightness(102%) contrast(101%);
@@ -281,10 +286,70 @@
       font-family: "Roboto Mono", monospace;
       font-weight: bold;
       // font-family: "Bangers", cursive;
-      letter-spacing: 5px;
+      letter-spacing: 3px;
       z-index: 1;
       width: 80%;
       color: rgb(240, 240, 240);
+      margin-top: -5rem;
     }
+  }
+
+  .wave {
+    height: 8rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .intro_wrap {
+    min-height: 45rem;
+    text-align: center;
+
+    main {
+      display: none;
+    }
+
+    .nav_list {
+      list-style: none;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      &_item {
+        color: #fff;
+        font-size: 1rem;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+        height: 3rem;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      &_icon {
+        height: 2.2rem;
+        margin-top: 1rem 0;
+        filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(297deg)
+          brightness(102%) contrast(101%);
+      }
+    }
+
+    .intro_text {
+      font-size: 3rem;
+      // font-family: "Solitreo", cursive;
+      font-family: "Roboto Mono", monospace;
+      font-weight: bold;
+      // font-family: "Bangers", cursive;
+      letter-spacing: 3px;
+      z-index: 1;
+      width: 80%;
+      color: rgb(240, 240, 240);
+      white-space: break-spaces;
+      margin: 20vh 0 0 3rem;
+    }
+  }
+
+  .wave {
+    height: 8rem;
   }
 }

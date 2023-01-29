@@ -91,7 +91,7 @@ const Intro = () => {
         </nav>
       </main>
       <span className="intro_text type-wrap">
-        <span style={{ whiteSpace: "pre" }} ref={el} />
+        <span className="text-actual" ref={el} />
       </span>
       <div className="wave"></div>
       <div className="wave"></div>

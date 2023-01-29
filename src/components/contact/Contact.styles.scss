@@ -124,3 +124,53 @@
     margin-top: 0;
   }
 }
+@media only screen and (max-width: 1440px) {
+  .Contact {
+    &_header {
+      width: 90%;
+    }
+
+    &_text {
+      width: 90%;
+      font-size: 1.4rem;
+    }
+
+    &_icons {
+      justify-content: space-between;
+
+      &_icon {
+        height: 4rem;
+      }
+    }
+  }
+  .visiable {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .Contact {
+    &_header {
+      width: 100%;
+      font-size: 1.5rem;
+    }
+
+    &_text {
+      width: 100%;
+      font-size: 1.2rem;
+    }
+
+    &_icons {
+      justify-content: space-between;
+      width: 100%;
+
+      &_icon {
+        height: 2.5rem;
+      }
+    }
+  }
+  .visiable {
+    opacity: 1;
+    margin-top: 0;
+  }
+}

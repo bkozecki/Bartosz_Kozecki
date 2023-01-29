@@ -9,6 +9,12 @@ const Header = () => {
     <header className="header">
       <div className="header_logo">
         <img
+          src={require("../../resources/menu.png")}
+          className="hamburger_menu"
+          alt="menu"
+          onClick={ctx.toggleMenu}
+        />
+        <img
           src={require("../../resources/code.png")}
           alt="logo"
           className="header_logo_img"
