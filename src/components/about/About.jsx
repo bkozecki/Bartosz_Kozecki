@@ -24,13 +24,13 @@ const About = () => {
           </h2>
           <ul className="about_content_list">
             <li className="about_content_left_list_item">
-              {`${!ctx.english ? ABOUT.firstParaPL : ABOUT.firstParaENG}}`}
+              {`${!ctx.english ? ABOUT.firstParaPL : ABOUT.firstParaENG}`}
             </li>
             <li className="about_content_left_list_item">
-              {`${!ctx.english ? ABOUT.secondParaPL : ABOUT.secondParaENG}}`}
+              {`${!ctx.english ? ABOUT.secondParaPL : ABOUT.secondParaENG}`}
             </li>
             <li className="about_content_left_list_item">
-              {`${!ctx.english ? ABOUT.thirdParaPL : ABOUT.thirdParaENG}}`}
+              {`${!ctx.english ? ABOUT.thirdParaPL : ABOUT.thirdParaENG}`}
             </li>
             <li className="about_content_left_list_item">
               <a
