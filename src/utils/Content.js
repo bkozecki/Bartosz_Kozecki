@@ -22,7 +22,7 @@ export const ABOUT = {
   headingPL: "Jestem Software Developerem.",
   headingENG: "I am a Software Developer",
   firstParaPL:
-    "Moje zainteresowanie programowaniem rozpoczeło się w 2021 roku, gdy zacząłem budować w zaciszu domomym proste strony internetowe.Chwile później znalazłem się w procesie tworzenia komercyjnychprojektów i prostych gier, tak narodziła się moja miłość doprogramowania.",
+    "Moje zainteresowanie programowaniem rozpoczeło się w 2021 roku, gdy zacząłem budować w zaciszu domomym proste strony internetowe. Chwile później znalazłem się w procesie tworzenia komercyjnych projektów i prostych gier, tak narodziła się moja miłość doprogramowania.",
   firstParaENG:
     "My interest in programming started in 2021, when I started building simple websites in the privacy of my home. Moments later I found myself in the process of designing and creating commercials projects and simple games, that's how my love for programming was born.",
   secondParaPL:
