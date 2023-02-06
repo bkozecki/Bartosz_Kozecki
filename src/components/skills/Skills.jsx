@@ -31,7 +31,6 @@ const Skills = () => {
         <div className="skills_section">
           <h2 className="skills_header">Backend</h2>
           <ul className="skills_list">
-            <li className="skills_list_item">PHP</li>
             <li className="skills_list_item">GraphQL</li>
             <li className="skills_list_item">Node.js</li>
           </ul>

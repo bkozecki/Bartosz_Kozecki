@@ -11,10 +11,10 @@ export const KINGS_ENG =
   "Example of e-commerce website with a firebase backend and a Stripe payment gate. Build with react, redux and SASS. With a sign-up and login functionality connected to the firebase backend that is also responsible for authentication.";
 
 export const BANKIST_PL =
-  "Przykład landing page dla aplikacji finansowej, funkcjonalność zbudowana za pomocą JavaScript.";
+  "Słownik języka angielskiego dla wszystkich Twoich potrzeb edukacyjnych i nie tylko. Stworzony za pomocą React i Dictionary API. Z dynamicznym motywem i przełącznikiem czcionek.";
 
 export const BANKIST_ENG =
-  "Example of a landing page for a financial application, functionality build with JavaScript.";
+  "This is a fully functioning English Dictionary for all your educational needs. Build with React and Dictionary API. With dynamic theme and font switcher.";
 
 export const ABOUT = {
   headerPL: "Nazywam się Bartosz,",

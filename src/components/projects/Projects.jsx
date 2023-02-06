@@ -90,15 +90,9 @@ const Projects = () => {
           </span>
         </div>
         <div className="projects_list_item">
-          <span className={`projects_name  third`}>
-            <img
-              src={require("../../resources/logo.png")}
-              alt="project logo"
-              className="third_logo"
-            />
-          </span>
+          <span className={`projects_name  third`}>Keyword</span>
           <a
-            href="https://bankfy.netlify.app/"
+            href="https://keyword-site.netlify.app/"
             target="_blank"
             onMouseEnter={() => revealInfo(3)}
             onMouseLeave={hideInfo}
